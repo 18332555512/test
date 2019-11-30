@@ -1,0 +1,13 @@
+
+server:
+  port: 8001
+  servlet:
+    context-path: /boothello
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=utf8
+    username: root
+    password: xiaozhao
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
