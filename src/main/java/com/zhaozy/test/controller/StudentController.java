@@ -28,6 +28,7 @@ public class StudentController {
     @ResponseBody
     public List<Student> selectAll(){
         LOGGER.info("master");
+        LOGGER.info("test");
         return studentService.selectAll();
     }
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
