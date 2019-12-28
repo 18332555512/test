@@ -2,6 +2,9 @@ package com.zhaozy.test.dao;
 
 import com.zhaozy.test.entity.Student;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.defaults.DefaultSqlSessionFactory;
 import org.springframework.stereotype.Repository;
 
 /**

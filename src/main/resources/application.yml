@@ -9,5 +9,34 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=utf8
     username: root
     password: xiaozhao
+#redis配置
+  redis:
+    #Redis服务器地址
+    host: 127.0.0.1
+    #Redis服务器连接端口
+    port: 6379
+    #Redis数据库索引（默认为0）
+    database: 0
+    jedis:
+      pool:
+        #连接池最大连接数（使用负值表示没有限制）
+        max-active: 50
+        #连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: 3000
+        #连接池中的最大空闲连接
+        max-idle: 20
+        #连接池中的最小空闲连接
+        min-idle: 2
+    #连接超时时间（毫秒）
+    timeout: 5000
+# mybatis配置
 mybatis:
   mapper-locations: classpath:mapper/*.xml
+# 放开Actuator Web REST 端点,否则访问不到
+management:
+  endpoints:
+    enabled: true
+    web:
+      base-path: /actuator  # 访问根路径
+      exposure:
+        include: "*"

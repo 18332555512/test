@@ -24,4 +24,10 @@ public class StudentController {
     public Student selectAll(){
         return studentService.selectAll();
     }
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    @ResponseBody
+    public String hello(){
+        return "student hello";
+    }
+
 }
