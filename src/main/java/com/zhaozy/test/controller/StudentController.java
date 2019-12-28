@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 /**
  * @author zhaozy
  * @date 2019/11/30 3:17 下午
@@ -24,7 +26,7 @@ public class StudentController {
 
     @RequestMapping(value = "/selectAll", method = RequestMethod.GET)
     @ResponseBody
-    public Student selectAll(){
+    public List<Student> selectAll(){
         LOGGER.info("master");
         return studentService.selectAll();
     }
