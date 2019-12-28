@@ -15,5 +15,5 @@ import java.util.List;
 @Repository
 public interface StudentDao {
 
-    public List<Student> selectAll();
+    public Student selectAll();
 }
