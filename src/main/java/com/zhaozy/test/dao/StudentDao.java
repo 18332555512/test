@@ -2,10 +2,9 @@ package com.zhaozy.test.dao;
 
 import com.zhaozy.test.entity.Student;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.defaults.DefaultSqlSessionFactory;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * @author zhaozy
@@ -16,5 +15,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface StudentDao {
 
-    public Student selectAll();
+    public List<Student> selectAll();
 }

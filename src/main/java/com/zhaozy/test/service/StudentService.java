@@ -5,6 +5,8 @@ import com.zhaozy.test.entity.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author zhaozy
  * @date 2019/11/30 3:17 下午
@@ -15,7 +17,7 @@ public class StudentService {
     @Autowired
     private StudentDao studentDao;
 
-    public Student selectAll() {
+    public List<Student> selectAll() {
         return studentDao.selectAll();
     }
 }
