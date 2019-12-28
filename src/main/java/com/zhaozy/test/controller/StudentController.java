@@ -24,12 +24,19 @@ public class StudentController {
     @RequestMapping(value = "/selectAll", method = RequestMethod.GET)
     @ResponseBody
     public List<Student> selectAll(){
+
         return studentService.selectAll();
     }
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     @ResponseBody
     public String hello(){
         return "student hello";
+    }
+
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    @ResponseBody
+    public String test(){
+        return "tset hello";
     }
 
 }
