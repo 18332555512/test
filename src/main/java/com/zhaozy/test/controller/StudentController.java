@@ -28,11 +28,13 @@ public class StudentController {
     @ResponseBody
     public List<Student> selectAll(){
         LOGGER.info("master");
+        LOGGER.info("pre");
         return studentService.selectAll();
     }
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     @ResponseBody
     public String hello(){
+        LOGGER.info("pre");
         return "student hello";
     }
 
