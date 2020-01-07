@@ -22,6 +22,7 @@ public class TestApplication {
 
         SpringApplication.run(TestApplication.class, args);
         LOGGER.info("boot-hello : 启动成功！");
+        LOGGER.info("boot-hello : pre！");
         //MyThread myThread = new MyThread();
         //Thread thread1 = new Thread(myThread);
         //thread1.start();
